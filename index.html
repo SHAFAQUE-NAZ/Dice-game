@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        
+        <div class="cont1">
+            <div class="head-cont">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                <h1 class="h-primary">New Game</h1>
+            </div>
+            <div class="dice">
+                <img src="assets/dice-1.svg" alt="Dice">
+            </div>
+            
+            <div class="rolldice">
+                <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+                <h1>Roll Dice</h1>
+    
+            </div>
+    
+            <div class="player-1">
+                <h1 class="score-1">Player 1</h1>
+                <div class="player-1-active"></div>
+            </div>
+            <div class="heading-1">
+                <h1 class="player-1-score">0</h1>
+
+            </div>
+            
+            <div class="curr-1">
+                <h1>Current </h1>
+                <h1 class="current-1-score white">0</h1>
+            </div>
+
+        </div>
+
+        <div class="cont2">
+
+            <div class="player-2">
+                <h1 class="score-2">Player 2</h1>
+                <div class="player-2-active"></div>
+            </div>
+            <div class="heading-2">
+                <h1 class="player-2-score">0</h1>
+
+            </div>
+            
+            <div class="curr-2">
+                <h1>Current </h1>
+                <h1 class="current-2-score white">0</h1>
+            </div>
+            
+        </div>
+
+
+
+    </div>
+    <script>
+        let playerOneScore = 0;
+        let playerTwoScore = 0;
+        // let currentOneScore = 0;
+        // let currentTwoScore = 0;
+        const playerOne = document.querySelector(".player-1-score");
+        const playerTwo = document.querySelector(".player-2-score");
+        const currentOne = document.querySelector(".current-1-score");
+        const currentTwo = document.querySelector(".current-2-score");
+        const rollDice = document.querySelector(".rolldice");
+        const img = document.querySelector(".dice img");
+        const playerOneDot = document.querySelector(".player-1-active");
+        const playerTwoDot = document.querySelector(".player-2-active");
+        const containerOne = document.querySelector(".cont1");
+        const containerTwo = document.querySelector(".cont2");
+        playerTwoDot.style.display="none"
+        const scoreOne = document.querySelector(".score-1");
+        const scoreTwo = document.querySelector(".score-2");
+        rollDice.addEventListener("click",function(){
+            const random = Math.ceil(Math.random()*6)
+            if(playerOneScore>=100){
+                scoreOne.innerHTML = "Winner";
+                return
+
+            }
+            if(playerTwoScore>=100){
+                scoreTwo.innerHTML = "Winner";
+                return
+
+            }
+            // console.log(random)
+            img.setAttribute('src', 'assets/dice-'+random+'.svg');
+            if(playerTwoDot.style.display==="none"){
+                
+                currentOne.innerHTML = random
+                // playerOneScore
+                if(random===1){
+                    playerTwoDot.style.display = "inline";
+                    playerOneDot.style.display = "none";
+                    containerTwo.style.background = "rgb(226, 226, 226)";
+                    containerOne.style.background = "none";    
+                }
+                else{
+                    playerOneScore+= random;
+                    playerOne.innerHTML = playerOneScore;
+                    }
+                
+            }
+            else if(playerOneDot.style.display==="none"){
+                currentTwo.innerHTML = random
+                if(random===1){
+                    playerTwoDot.style.display = "none";
+                    playerOneDot.style.display = "inline";
+                    containerOne.style.background = "rgb(226, 226, 226)";
+                    containerTwo.style.background = "none";
+                }
+                else{
+                   
+                    playerTwoScore+= random;
+                    playerTwo.innerHTML = playerTwoScore; 
+                }
+             
+            } 
+            
+          
+    })
+
+    // const headCont = document.querySelector(".head-cont");
+    // headCont.addEventListener("click",function(){
+    //     rollDice.reset();
+    // })
+
+    const headCont = document.querySelector(".head-cont");
+        headCont.addEventListener("click",function(){
+            currentOne.innerHTML = 0;
+            currentTwo.innerHTML = 0;
+            playerOne.innerHTML = 0;
+            playerTwo.innerHTML= 0;
+            playerOneScore = 0;
+            playerTwoScore = 0;
+            containerOne.style.background = "rgb(226, 226, 226)";
+            containerTwo.style.background = "white";
+            playerTwoDot.style.display = "none";
+            playerOneDot.style.display = "inline";
+            scoreOne.innerHTML = "Player 1";
+            scoreTwo.innerHTML = "Player 2";
+            
+
+
+            
+            
+
+        })
+
+        
+
+        
+
+        
+
+    </script>
+</body>
+</html>

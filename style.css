@@ -1,0 +1,189 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+.container{
+    width:70%;
+    display: flex;
+    flex-direction: row;
+    margin: 60px auto;
+    height: 500px;
+    /* border: 2px solid brown; */
+}
+
+.head-cont{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* padding: 4px 5px; */
+    /* left: 43%; */
+    right: -105px;
+    top: 20px;
+    width: 210px;
+    cursor: pointer;
+    
+    /* margin: auto; */
+}
+.head-cont i{
+    margin-right: 10px;
+    font-size: 1.6rem;
+    color:maroon
+}
+;
+.head{
+    letter-spacing: 3px;
+}
+
+/* .fa fa-plus-circle{
+    padding: 4px ;
+} */
+
+.h-primary{
+    /* padding: 2px 10px; */
+    font-size: 2rem;
+}
+
+.dice{
+    position: absolute;
+    display: block;
+    /* width: 5px; */
+    top:45%;
+    right: -25px;
+    /* left: 49%; */
+   
+
+}
+
+
+.dice img{
+    height: 50px;
+    width: 50px;
+}
+
+
+.rolldice{
+    /* background-color: red; */
+    right: -100px;
+    position: absolute;
+    display: flex;
+    /* flex-direction: row;
+    justify-content: space-between; */
+    align-items: center;
+    
+    /* bottom: 226px; */
+    /* top: 65%; */
+    width: 180px;
+    /* left: 43%; */
+    bottom: 20px;
+    cursor: pointer;
+}
+
+
+.rolldice i{
+    color: maroon;
+    font-size: 1.7rem;
+    margin-right: 20px;
+}
+
+.cont1{
+    background-color:rgb(226, 226, 226);
+    position: relative;
+    /* border: 2px solid green; */
+    height: 500px;
+    width: 50%;
+}
+
+.cont2{
+    /* position: absolute; */
+    /* border: 2px solid blue; */
+    height: 500px;
+    width: 50%;
+    /* background-color: peachpuff; */
+}
+
+.player-1{
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-1-active{
+    background-color: maroon;
+    /* border: 2px solid blue; */
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-left: 25px;
+}
+
+.player-2{
+    text-align: center;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.player-2-active{
+    background-color: maroon;
+    /* border: 2px solid blue; */
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-left: 25px;
+    display: none;
+}
+
+.heading-1{
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+.heading-1 h1{
+    color: maroon;
+    font-size: 4rem;
+}
+
+
+
+
+
+.heading-2{
+    text-align: center;
+    margin-top: 90px;
+}
+
+
+.heading-2 h1{
+    color: maroon;
+    font-size: 4rem;
+}
+
+.curr-1{
+    background-color: maroon;
+    width: 33%;
+    margin: 125px auto 0px;
+    text-align: center;
+}
+
+.curr-2{
+    background-color: maroon;
+    margin: 125px auto 0px ;
+    text-align: center;
+    width: 33%;
+    
+}
+
+.white{
+    color: white;
+}
+
